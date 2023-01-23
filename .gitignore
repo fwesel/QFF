@@ -49,7 +49,7 @@ octave-workspace
 
 # Dataset and workspaces folder
 datasets/
-workspaces/
+workspaces/*/*
 
 # Shell
 *.sh
