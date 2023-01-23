@@ -47,8 +47,9 @@ octave-workspace
 *.pdf
 *.fig
 
-# Dataset folder
+# Dataset and workspaces folder
 datasets/
+workspaces/
 
 # Shell
 *.sh
