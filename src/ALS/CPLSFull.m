@@ -1,7 +1,8 @@
+% This function is part of the paper:
+% "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+% by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
 function [W, loss, error,time] = CPLSFull(X, y, featuresFull, M, R ,lambda, numberSweeps)
-    % This function is part of the paper:
-    % "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
-    % by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+    % Alternating Least-Squares optimizer for tensor network kernel machine (TKM).
     tic;    
     [N, D] = size(X);
     % Initialize projected features Matd and regularization term reg

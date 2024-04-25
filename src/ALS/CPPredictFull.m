@@ -1,7 +1,8 @@
+% This function is part of the paper:
+% "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+% by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
 function score = CPPredictFull(X, featuresFull, W)
-    % This function is part of the paper:
-    % "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
-    % by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+    % Predictor for quantized tensor network kernel machine (QTKM).
     [N,D] = size(X);
     score = ones(N,1);
     for d = 1:D

@@ -1,7 +1,9 @@
+% This function is part of the paper:
+% "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+% by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
 function [W, loss, error, time, lossVal] = CPLS(X, y, features, M, R, lambda, numberSweeps, varargin)
-    % This function is part of the paper:
-    % "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
-    % by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+    % Alternating Least-Squares optimizer for quantized tensor network kernel machine
+    % (QTKM).
     tic;
     [N, D] = size(X);
     % Ensure that M is an integer power of 2.

@@ -1,7 +1,8 @@
+% This function is part of the paper:
+% "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+% by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
 function score = CPPredict(X, features, W)
-    % This function is part of the paper:
-    % "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
-    % by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+    % Predictor for quantized tensor network kernel machine (QTKM).
     [N,D] = size(X);
     log2M = size(W,1);
     score = ones(N,1);
