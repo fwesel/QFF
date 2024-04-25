@@ -1,3 +1,7 @@
+% This function is part of the paper:
+% "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+% by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+% This script provides the results in Table 2 and Figure 3.
 addpath('./src/ALS')
 addpath('./src/features')
 addpath('./src/utils')

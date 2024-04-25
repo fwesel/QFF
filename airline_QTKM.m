@@ -1,3 +1,7 @@
+% This function is part of the paper:
+% "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+% by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+% This script provides the results in Table 1 concerning QTKM.
 addpath('./src/ALS')
 addpath('./src/features')
 addpath('./src/utils')
@@ -56,7 +60,7 @@ for N = NSet
             Y = (Y-YMean)./YStd;
             test(ite,NIdx,RIdx) = mean((Y-CPPredict(X,features,WCP)).^2);
             disp('Test error: '+string(test(ite,NIdx,RIdx)));
-            save("airline"+"M"+string(M)+"P"+string(P)+"RMax"+string(max(RSet))+"maxIte"+string(maxIte)+".mat",'train','test','wallTime','loss');
+            save("airline_QTKM"+"M"+string(M)+"P"+string(P)+"RMax"+string(max(RSet))+"maxIte"+string(maxIte)+".mat",'train','test','wallTime','loss');
         end
     end
 end

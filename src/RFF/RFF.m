@@ -1,7 +1,12 @@
 function [ZZ,ZY,W,B] = RFF(X,Y,M,MMax)
+    % This function is part of the paper:
+    % "Quantized Fourier and Polynomial Features for more Expressive Tensor Network Models"
+    % by Frederiek Wesel and Kim Batselier, presented at the International Conference on Artificial Intelligence and Statistics, 2024.
+    % This function implements real-valued random features for large-scale kernel machines, as described in the paper:
+    % "Random features for large-scale kernel machines"
+    % by Ali Rahimi and Benjamin Recht, published in Advances in Neural Information Processing Systems, 2007.
     batchSize = 100;
     [N,D] = size(X);
-%     W = normrnd(0,1/lengthscale,D,M);
     W = 2*pi*(rand(D,M)-0.5)*MMax;
     B = 2*pi*rand(1,M);
     ZZ = zeros(M,M);
